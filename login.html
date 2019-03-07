@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!--Custom styles-->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="login-reg-panel">
+		<div class="login-info-box">
+			<h2>Have an account?</h2>
+			<p>Lorem ipsum dolor sit amet</p>
+			<label id="label-register" for="log-reg-show">Login</label>
+			<input type="radio" name="active-log-panel" id="log-reg-show"  checked="checked">
+		</div>
+							
+		<div class="register-info-box">
+			<h2>Don't have an account?</h2>
+			<p>Lorem ipsum dolor sit amet</p>
+			<label id="label-login" for="log-login-show">Register</label>
+			<input type="radio" name="active-log-panel" id="log-login-show">
+		</div>
+							
+		<div class="white-panel">
+			<div class="login-show">
+				<h2 style="color: white">LOGIN</h2>
+                <input type="text" id="txtUserName" placeholder="UserName">
+                <input type="password" id="txtPassword" placeholder="Password">
+                <div>
+                    <span style="color: red; font-weight: bold;" id="alerUserPass"></span>
+                </div>
+				<button class="btn btn-success btn_login" onclick="actionLogin()">Login</button>
+				<a style="color: white" href="#">Forgot password?</a>
+			</div>
+			<div class="register-show">
+				<h2 style="color: white">REGISTER</h2>
+				<input id="TaiKhoan" type="text" id="" placeholder="Tài Khoản">
+				<input id="HoTen" type="text" placeholder="Họ Tên">
+                <input id="MatKhau" type="password" placeholder="Mật Khẩu">
+                <input id="Email" type="text" placeholder="Email">
+                <input id="SoDienThoai" type="text" placeholder="Số Điện Thoại">
+                <div class="form-group">
+                    <select class="form-control" id="maLoaiNguoiDung">
+                        <option value="HV">Học Viên</option>
+                        <option value="GV">Giáo Vụ</option>
+                    </select>
+                </div>
+                <div>
+                    <span style="color: green; font-weight: bold; font-size: 18px;" id="alerRegister"></span>
+                </div>
+                <button class="btn btn-info btn_register" onclick="actionRegister()">Register</button>
+                <span id="alerRegister"></span>
+			</div>
+		</div>
+	</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+        <script src="./js/stylelogin.js"></script>
+        <script src="./models/NguoiDung.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+
+</html>
